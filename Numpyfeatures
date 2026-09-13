@@ -1,0 +1,56 @@
+import numpy as np
+
+#create from list
+arr = np.array([1, 2, 3, 4, 5])
+print(arr, type(arr), arr.dtype, arr.shape)
+
+
+arr2 = np.array([1, 2, 3, 4, 5, "prime"])
+print(arr2, type(arr2), arr2.dtype, arr.shape)
+
+arr2D = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]] )
+print(arr2D, arr2D.shape)
+
+#create
+
+arr1 = np.zeros((2, 3), dtype="int64")  #prefill
+print(arr1, arr1.shape)
+
+arr2 = np.ones((2, 3), dtype="int64")  #prefill
+print(arr2, arr2.shape)
+
+arr3 = np.full((3, 4), 100)  #prefill with val
+print(arr3, arr3.shape)
+
+
+arr4 = np.eye((3), dtype= "int64") #identity matrix
+print(arr4, arr4.shape)
+
+#range(start, end, step)
+arr5 = np.arange(0, 11, 2) #range elements
+print(arr5, arr5.shape)
+
+
+
+
+
+
+
+
+
+
+#properties of numpy array
+
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+print(arr.shape)     #dimensions = m * n
+print(arr.size)       #tot els
+print(arr.dtype)
+print(arr.ndim)
+
+float_arr = arr.astype(np.float64)
+print(float_arr, float_arr.dtype)
+
+
+arr6 = np.linspace(1, 100, 4) #evenly spaced array7
+print(arr6, arr6.shape)
