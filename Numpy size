@@ -1,0 +1,30 @@
+import numpy as np
+import time
+
+
+#execution performance
+size = 10_000_000
+#python list
+py_list = list(range(size))
+start = time.time()
+sq_list = [x**2 for x in py_list]
+end = time.time()
+print(f"python list time = {end-start} seconds")
+
+# numpy array
+np_arr = np.array(py_list)
+start = time.time()
+#vectorization 
+sq_array = np_arr **2
+end = time.time()
+
+print(f"numpy array list time = {end-start} seconds")
+
+
+
+#memory
+
+import sys
+
+print(f"python list size = {sys.getsizeof(py_list) * len(py_list)} bytes")
+print(f"numpy arr list size = {np_arr.nbytes} bytes")
