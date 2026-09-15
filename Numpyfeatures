@@ -136,3 +136,179 @@ sub_arr[0] = 200
 print(sub_arr)
 print(arr)
 
+
+
+
+
+
+
+
+
+
+
+#Data types
+arr = np.array([1, 2, 3.14, 4, 5, "Prime"])
+
+print(arr, arr.dtype)
+
+
+
+
+
+
+
+
+#complex number
+
+arr1 = np.array([3 + 5j])
+arr2 = np.array([6 + 2j])
+print(arr1 - arr2)
+
+#strings and object  not thaat important 
+arr = np.array(["prime", 1, 3.13, {1, 2, 3}])
+
+print(arr, arr.dtype)
+
+
+
+
+
+
+
+#Multi-Dimensional array
+
+arr2D = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(arr2D)
+
+print(np.sum(arr2D))
+
+sum_of_all_rows = np.sum(arr2D, axis = 1)
+print(sum_of_all_columns)
+
+
+print(arr2D[0:3, 1:2])
+
+
+
+
+
+
+
+
+# 3D array
+
+arr3D = np.array([[[1, 2], [3, 4], [5, 6] ], [[7,8], [9,10], [11, 12] ] ] ) #2 × 3 × 2
+
+print(arr3D, arr3D.shape)
+
+
+#indexing
+print(arr3D[1, 1, 0])
+
+#slicing
+arr3D[:, 0, :] = 99 #first row from both layers
+print(arr3D)
+
+
+
+
+
+
+
+#vectorization
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([6, 7, 8, 9, 10])
+
+print(arr1 ** 2)
+print(arr2 + 10)
+print(arr1 + arr2)
+
+
+
+
+#Broadcasting
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([[1, 2, 3, 4, 5], [1, 2, 3, 4, 5]])
+
+
+print(arr1.shape)
+print(arr2.shape)
+print(arr1 + arr2)
+
+#normalize
+
+
+arr = np.array([ [1,2], [3, 4]])
+
+mean = np.mean(arr)
+std_dev = np.std(arr)
+
+
+normalized_arr = (arr - mean) / std_dev
+
+print(normalized_arr)
+print(mean)
+print(std_dev)
+print(np.sqrt(5/4))
+
+
+
+
+
+
+#mathmatical functions
+
+#aggregation
+arr = np.array([1, 2, 3, 4, 5])
+
+print(np.sum(arr))
+print(np.prod(arr))
+print(np.min(arr))
+print(np.max(arr))
+print(np.argmin(arr))
+print(np.argmax(arr))
+
+print(np.mean(arr))
+print(np.std(arr))
+print(np.median(arr))
+print(np.var(arr))
+
+
+#power functions
+
+arr = np.array([1, 2, 3, 4, 5])
+
+
+print(np.square(arr))
+print(np.sqrt(arr))
+print(np.pow(arr, 3))
+
+
+
+
+
+
+#log
+arr = np.array([1, 2, 3, 4, 5])
+
+print(np.log(arr))
+print(np.log2(arr))
+print(np.exp(arr))
+
+
+#rounding
+
+
+print(np.round(3.14))
+print(np.round(3.94))
+print(np.ceil(3.94))
+print(np.floor(3.94))
+print(np.trunc(3.94))
+
+
+arr = np.array([1, 2, 1, -5 ,9 , 2, -3, -4, 5])
+
+print(np.unique(arr))
+print(np.sort(arr))
+print(np.unique(arr))
+print(np.abs(arr))
